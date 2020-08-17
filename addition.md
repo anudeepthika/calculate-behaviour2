@@ -4,14 +4,21 @@ Scenario: Add two numbers
   
   Given I have a calculator that's turned on.
 
-  When I enter "number1"
+  When I enter "first number"
   And I press "+" button
-  And I enter "number2"
+  And I enter "second number"
   And I press "=" button
   
   Then I see the "added sum" as the result
 
 Scenario: Add more numbers
+
+  Given I have a calculator that's turned on
+  
+  When I enter all the numbers by pressing "+" in between
+  And press "=" after entering last number
+  
+  Then I see the 'added sum" as the result
 
 Scenario: Result is too large to display (or overrunning the limits)
 
