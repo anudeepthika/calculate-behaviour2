@@ -37,7 +37,7 @@ Scenario: Result is too large to display (or overrunning the limits)
   And repeat this until you enter last but one number
   And press "=" after entering last number
   
-  Then I see the added results in exponential form
+  Then I see the added result in exponential form
 
 Scenario: Numbers can be negative
 
@@ -57,6 +57,14 @@ Scenario: Number can be irrational
 Scenario: Length of each number
 
 Scenario: If number1 or number2 is not entered
+
+  Given I have a calculator that's turned on.
+  
+  When I enter "first number"
+  And I press "+" button
+  And then I press "=" button
+
+Then I see an error "syntax error" or "enter atleast two numbers".
 
 Scenario: If the number is real/complex
 
