@@ -15,10 +15,15 @@ Scenario: Add more numbers
 
   Given I have a calculator that's turned on
   
-  When I enter all the numbers by pressing "+" alternatively
+ When I enter "first number"
+  And I press "+" button
+  And I enter "next number"
+  And I press "+" button
+  And I enter "next number"
+  And repeat this until you enter last but one number
   And press "=" after entering last number
   
-  Then I see the 'added sum" as the result
+  Then I see the 'added sum" of all the entered numbers
 
 Scenario: Result is too large to display (or overrunning the limits)
 
