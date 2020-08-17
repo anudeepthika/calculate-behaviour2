@@ -15,7 +15,7 @@ Scenario: Add more numbers
 
   Given I have a calculator that's turned on
   
-  When I enter all the numbers by pressing "+" in between
+  When I enter all the numbers by pressing "+" alternatively
   And press "=" after entering last number
   
   Then I see the 'added sum" as the result
