@@ -47,7 +47,7 @@ Scenario: Numbers can be fraction
 
   When I enter "first fractional number"
   And I press "+" button
-  And I enter "second fractoinal number"
+  And I enter "second fractional number"
   And I press "=" button
   
   Then I see the "added sum" as the fractional number
