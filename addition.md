@@ -64,7 +64,7 @@ Scenario: If number1 or number2 is not entered
   And I press "+" button
   And then I press "=" button
 
-Then I see an error "syntax error" or "enter atleast two numbers".
+Then I see an error "enter atleast two numbers".
 
 Scenario: If the number is real/complex
 
